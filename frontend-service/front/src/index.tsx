@@ -62,6 +62,8 @@ root.render(
             <AuthProvider>
                 <Routes>
                     {/* Authentication Pages */}
+                    {/*Routes essentially associate urls with particular typescript (or whatever) content.*/}
+                    {/*They are used with Links which I think are here defined in the Layout.*/}
                     <Route path='/register' element={<RegisterPage />} />
                     <Route path='/login' element={<LoginPage />} />
                     <Route path='/logout' element={<LogoutPage />} />
