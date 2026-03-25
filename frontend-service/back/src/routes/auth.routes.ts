@@ -1,7 +1,7 @@
 import crypto from 'crypto'
 import bcrypt from 'bcrypt'
 import { Request, Response, Router } from 'express'
-import { createUserContainer } from 'src/services/docker.service'
+// import { createUserContainer } from 'src/services/docker.service'
 
 import Client from '../models/client.model'
 import RefreshToken from '../models/refreshToken.model'
@@ -123,23 +123,23 @@ router.post(AUTH_ROUTES.login, async (req: Request, res: Response) => {
     user.lastLoginAt = new Date()
     await user.save()
 
-    if (!user.dockerService?.containerId) {
-        try {
-            const containerId = await createUserContainer(user)
-            user.dockerService = { containerId }
-            await user.save()
-        } catch (dockerError) {
-            LoggingService.log({
-                level: 'error',
-                service: 'AUTH',
-                message: 'Failed to create Docker container during login',
-                data: {
-                    user,
-                    error: dockerError.message,
-                },
-            })
-        }
-    }
+    // if (!user.dockerService?.containerId) {
+    //     try {
+    //         const containerId = await createUserContainer(user)
+    //         user.dockerService = { containerId }
+    //         await user.save()
+    //     } catch (dockerError) {
+    //         LoggingService.log({
+    //             level: 'error',
+    //             service: 'AUTH',
+    //             message: 'Failed to create Docker container during login',
+    //             data: {
+    //                 user,
+    //                 error: dockerError.message,
+    //             },
+    //         })
+    //     }
+    // }
 
     let redirect = undefined
     if (user.permissions.isAdmin) {
