@@ -3,18 +3,18 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 
-import AdminUserForm from '@/forms/admin/AdminUserForm'
-
 import 'regenerator-runtime'
 import './index.css'
 
-import ConfirmAccountPage from '@/auth/ConfirmAccount'
+import ConfirmAccountPage from '@/auth/ConfirmAccount' // may not need
+import RegisterPage from '@/auth/RegisterPage'
 import LoginPage from '@/auth/LoginPage'
 import LogoutPage from '@/auth/LogoutPage'
 import RequestResetPage from '@/auth/RequestPasswordResetPage'
 import ResetPasswordPage from '@/auth/ResetPasswordPage'
 import ForbiddenPage from '@/error-pages/ForbiddenPage'
 import NotFoundPage from '@/error-pages/NotFoundPage'
+import Onboarding from '@/app/Onboarding' // not sure whether needed
 
 import {
     AuthenticatedWrapper,
@@ -46,9 +46,12 @@ root.render(
                     <Route path='/confirm-account' element={<ConfirmAccountPage />} />
 
                     {/* Public Routes */}
+                    {/*not sure whether either onboarding or AccessExpired are likely to be needed.*/}
                     <Route path='/onboarding' element={<Onboarding />} />
-                    <Route path='/access-expired' element={<AccessExpiredPage />} />
+                    {/*<Route path='/access-expired' element={<AccessExpiredPage />} />*/}
 
+                    {/*Can see how one layout is made for standard user, one for admin.*/}
+                    {/*Still don't really understand routes though. Seem to be a React thing. Read up.*/}
                     <Route element={<AuthenticatedWrapper />}>
                         <Route element={<OnboardingWrapper />}>
                             <Route path='/' element={<AppLayout />}>
