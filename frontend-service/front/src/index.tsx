@@ -81,53 +81,54 @@ root.render(
                     <Route element={<AuthenticatedWrapper />}>
                         <Route element={<OnboardingWrapper />}>
                             <Route path='/' element={<App/>}>
-                            {/*<Route path='/' element={<AppLayout />}>*/}
-                            {/*    /!*<Route index element={<Dashboard />} />*!/*/}
-                            {/*    /!*<Route path='evaluations' element={<Evaluations />} />*!/*/}
-                            {/*    /!*<Route path='evaluations/:id' element={<SingleFunctionView />} />*!/*/}
-                            {/*    /!*  *!/*/}
-                            {/*    /!*<Route path='analyses'>*!/*/}
-                            {/*    /!*    <Route index element={<LoadPreviousAnalysis />} />*!/*/}
-                            {/*    /!*    <Route path='create' element={<CreateAnalysis />} />*!/*/}
-                            {/*    /!*    <Route path='create-from-external' element={<CreateExternalAnalysisForm />} />*!/*/}
-                            {/*    /!*    <Route path='create-from-external/:id' element={<CreateExternalAnalysisForm />} />*!/*/}
-                            {/*    /!*    <Route path='create-from-function' element={<CreateAnalysisForm />} />*!/*/}
-                            {/*    /!*    <Route path='run/:id' element={<RunAnalysis />} />*!/*/}
-                            {/*    /!*    <Route path='external/:id' element={<ManageExternalAnalysis />} />*!/*/}
-                            {/*    /!*</Route>*!/*/}
-                            {/*    /!*  *!/*/}
-                            {/*    /!*<Route path='client-management' element={<ClientManagement />} />*!/*/}
-                            {/*    /!*<Route path='client-management/user/:id' element={<ClientUserManagement />} />*!/*/}
-                            {/*    /!*  *!/*/}
-                            {/*    <Route path='profile' element={<Profile />} />*/}
+                                {/*<Route path='/' element={<AppLayout />}>*/}
+                                {/*    /!*<Route index element={<Dashboard />} />*!/*/}
+                                {/*    /!*<Route path='evaluations' element={<Evaluations />} />*!/*/}
+                                {/*    /!*<Route path='evaluations/:id' element={<SingleFunctionView />} />*!/*/}
+                                {/*    /!*  *!/*/}
+                                {/*    /!*<Route path='analyses'>*!/*/}
+                                {/*    /!*    <Route index element={<LoadPreviousAnalysis />} />*!/*/}
+                                {/*    /!*    <Route path='create' element={<CreateAnalysis />} />*!/*/}
+                                {/*    /!*    <Route path='create-from-external' element={<CreateExternalAnalysisForm />} />*!/*/}
+                                {/*    /!*    <Route path='create-from-external/:id' element={<CreateExternalAnalysisForm />} />*!/*/}
+                                {/*    /!*    <Route path='create-from-function' element={<CreateAnalysisForm />} />*!/*/}
+                                {/*    /!*    <Route path='run/:id' element={<RunAnalysis />} />*!/*/}
+                                {/*    /!*    <Route path='external/:id' element={<ManageExternalAnalysis />} />*!/*/}
+                                {/*    /!*</Route>*!/*/}
+                                {/*    /!*  *!/*/}
+                                {/*    /!*<Route path='client-management' element={<ClientManagement />} />*!/*/}
+                                {/*    /!*<Route path='client-management/user/:id' element={<ClientUserManagement />} />*!/*/}
+                                {/*    /!*  *!/*/}
+                                {/*    <Route path='profile' element={<Profile />} />*/}
+                                {/*</Route>*/}
+                            </Route>
+                            {/*<Route element={<PermissionsWrapper required={{ isAdmin: true }} />}>*/}
+                            {/*    <Route path='/admin' element={<AdminLayout />}>*/}
+                            {/*        <Route index element={<AdminUsersTable />} />*/}
+                            {/*        <Route path='users/:id' element={<AdminUserForm />} />*/}
+                            {/*        <Route path='clients' element={<AdminClientsTable />} />*/}
+                            {/*        <Route path='clients/:id' element={<AdminClientForm />} />*/}
+                            {/*        <Route path='analyses' element={<AdminAnalysisRunsTable />} />*/}
+                            {/*        /!*  *!/*/}
+                            {/*        <Route path='functions' element={<AdminFunctionsTable />} />*/}
+                            {/*        <Route path='functions/:id' element={<AdminFunctionForm />} />*/}
+                            {/*        /!*  *!/*/}
+                            {/*        <Route path='analyses'>*/}
+                            {/*            <Route index element={<LoadPreviousAnalysis />} />*/}
+                            {/*            <Route path='create' element={<CreateAnalysis />} />*/}
+                            {/*            <Route path='create-from-external' element={<CreateExternalAnalysisForm />} />*/}
+                            {/*            <Route path='create-from-external/:id' element={<CreateExternalAnalysisForm />} />*/}
+                            {/*            <Route path='create-from-function' element={<CreateAnalysisForm />} />*/}
+                            {/*            <Route path='run/:id' element={<RunAnalysis />} />*/}
+                            {/*            <Route path='external/:id' element={<ManageExternalAnalysis />} />*/}
+                            {/*        </Route>*/}
+                            {/*        /!*  *!/*/}
+                            {/*        <Route path='*' element={<NotFoundPage redirectTo='/admin' />} />*/}
+                            {/*    </Route>*/}
                             {/*</Route>*/}
                         </Route>
-                        {/*<Route element={<PermissionsWrapper required={{ isAdmin: true }} />}>*/}
-                        {/*    <Route path='/admin' element={<AdminLayout />}>*/}
-                        {/*        <Route index element={<AdminUsersTable />} />*/}
-                        {/*        <Route path='users/:id' element={<AdminUserForm />} />*/}
-                        {/*        <Route path='clients' element={<AdminClientsTable />} />*/}
-                        {/*        <Route path='clients/:id' element={<AdminClientForm />} />*/}
-                        {/*        <Route path='analyses' element={<AdminAnalysisRunsTable />} />*/}
-                        {/*        /!*  *!/*/}
-                        {/*        <Route path='functions' element={<AdminFunctionsTable />} />*/}
-                        {/*        <Route path='functions/:id' element={<AdminFunctionForm />} />*/}
-                        {/*        /!*  *!/*/}
-                        {/*        <Route path='analyses'>*/}
-                        {/*            <Route index element={<LoadPreviousAnalysis />} />*/}
-                        {/*            <Route path='create' element={<CreateAnalysis />} />*/}
-                        {/*            <Route path='create-from-external' element={<CreateExternalAnalysisForm />} />*/}
-                        {/*            <Route path='create-from-external/:id' element={<CreateExternalAnalysisForm />} />*/}
-                        {/*            <Route path='create-from-function' element={<CreateAnalysisForm />} />*/}
-                        {/*            <Route path='run/:id' element={<RunAnalysis />} />*/}
-                        {/*            <Route path='external/:id' element={<ManageExternalAnalysis />} />*/}
-                        {/*        </Route>*/}
-                        {/*        /!*  *!/*/}
-                        {/*        <Route path='*' element={<NotFoundPage redirectTo='/admin' />} />*/}
-                        {/*    </Route>*/}
-                        {/*</Route>*/}
-                    </Route>
                     {/* Error */}
+                    </Route>
                     <Route path='/forbidden' element={<ForbiddenPage />} />
                     <Route path='/*' element={<NotFoundPage redirectTo='/' />} />
                 </Routes>
