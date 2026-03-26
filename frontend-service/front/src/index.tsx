@@ -30,8 +30,12 @@ import { ToastContainer } from 'react-toastify'
 import 'regenerator-runtime'
 import './index.css'
 
-import ConfirmAccountPage from '@/auth/ConfirmAccount' // may not need
-import RegisterPage from '@/auth/RegisterPage'
+// problem is that wherever mui is installed is where it's looking; we've probably got some inconsistency in directory layout.
+// import RegisterPage from '@/'
+
+
+import ConfirmAccountPage from './auth/ConfirmAccount' // may not need
+// import RegisterPage from '@/auth/RegisterPage'
 import LoginPage from '@/auth/LoginPage'
 import LogoutPage from '@/auth/LogoutPage'
 import RequestResetPage from '@/auth/RequestPasswordResetPage'
