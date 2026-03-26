@@ -1,8 +1,29 @@
 {
-  "name": "react-app",
+  "name": "sysc-dashboard",
   "version": "0.1.0",
   "private": true,
+  "author": "Tim Hutty",
   "dependencies": {
+    "@headlessui/react": "^1.7.4",
+    "@heroicons/react": "^2.0.18",
+    "@monaco-editor/react": "^4.7.0",
+    "axios": "^1.6.2",
+    "clsx": "^2.1.1",
+    "d3": "^7.9.0",
+    "date-fns": "^3.6.0",
+    "date-fns-tz": "^3.1.3",
+    "export-to-csv": "^1.4.0",
+    "html-to-image": "^1.11.13",
+    "jszip": "^3.10.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-helmet": "^6.1.0",
+    "react-router": "^6.16.0",
+    "react-router-dom": "^6.16.0",
+    "react-toastify": "^11.0.3",
+    "recharts": "^3.1.0",
+    "regenerator-runtime": "^0.14.0",
+    "tailwind-merge": "^1.14.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^7.3.4",
@@ -15,8 +36,6 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "leaflet": "^1.9.4",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
     "react-leaflet": "^5.0.0",
     "react-range-slider-input": "^3.2.1",
     "react-scripts": "5.0.1",
@@ -24,10 +43,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite --host",
+    "ula": "vite -m production",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +69,27 @@
   },
   "devDependencies": {
     "@types/geojson": "^7946.0.16",
-    "@types/leaflet": "^1.9.21"
+    "@types/leaflet": "^1.9.21",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@types/d3": "^7.4.3",
+    "@types/node": "^16.18.58",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-helmet": "^6.1.11",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "tailwindcss": "^3.2.2",
+    "tailwindcss-animated": "^1.0.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
   }
 }
+
+
+
