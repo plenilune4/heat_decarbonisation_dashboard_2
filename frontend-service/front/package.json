@@ -4,7 +4,7 @@
   "private": true,
   "author": "Tim Hutty",
   "dependencies": {
-    "@headlessui/react": "^1.7.4",
+    "@headlessui/react": "^2.0.0",
     "@heroicons/react": "^2.0.18",
     "@monaco-editor/react": "^4.7.0",
     "axios": "^1.6.2",

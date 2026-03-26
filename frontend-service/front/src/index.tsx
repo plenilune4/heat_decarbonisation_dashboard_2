@@ -34,7 +34,7 @@ import './index.css'
 // import RegisterPage from '@/'
 
 
-import ConfirmAccountPage from './auth/ConfirmAccount' // may not need
+import ConfirmAccountPage from '@/auth/ConfirmAccount' // may not need
 // import RegisterPage from '@/auth/RegisterPage'
 import LoginPage from '@/auth/LoginPage'
 import LogoutPage from '@/auth/LogoutPage'
